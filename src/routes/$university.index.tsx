@@ -2,6 +2,7 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { Page, Section, Prose } from "../components/Layout";
 import { GradeTable, breadcrumbJsonLd } from "../components/content";
 import { UniversityLogo } from "../components/Brand";
+import { ToolIconTile, toolIconForSlug } from "../components/ToolIcon";
 import { getUniversity, themeStyle } from "../data/universities";
 
 export const Route = createFileRoute("/$university/")({
