@@ -1,6 +1,6 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { Page, Section, Prose } from "../components/Layout";
-import { GradeTable } from "../components/content";
+import { GradeTable, breadcrumbJsonLd } from "../components/content";
 import { UniversityLogo } from "../components/Brand";
 import { getUniversity, themeStyle } from "../data/universities";
 
@@ -22,6 +22,18 @@ export const Route = createFileRoute("/$university/")({
         { name: "twitter:card", content: "summary" },
       ],
       links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Stupus", path: "/" },
+              { name: "Universities", path: "/universities/" },
+              { name: u.shortName, path: url },
+            ]),
+          ),
+        },
+      ],
     };
   },
   component: UniversityHub,
