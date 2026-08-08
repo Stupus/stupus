@@ -1,6 +1,12 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { Page, Section, Prose } from "../components/Layout";
-import { ToolIntro, Formula, GradeTable, RelatedLinks } from "../components/content";
+import {
+  ToolIntro,
+  Formula,
+  GradeTable,
+  RelatedLinks,
+  breadcrumbJsonLd,
+} from "../components/content";
 import { Faq, faqJsonLd } from "../components/Faq";
 import { CgpaCalculator } from "../components/calculators/CgpaCalculator";
 import { SgpaCalculator } from "../components/calculators/SgpaCalculator";
@@ -46,6 +52,16 @@ export const Route = createFileRoute("/$university/$tool")({
         {
           type: "application/ld+json",
           children: JSON.stringify(faqJsonLd(content.faqs)),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: "Stupus", path: "/" },
+              { name: "Universities", path: "/universities/" },
+              { name: content.h1, path: url },
+            ]),
+          ),
         },
       ],
     };

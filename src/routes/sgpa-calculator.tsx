@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Page, Section, Prose } from "../components/Layout";
-import { ToolIntro, Formula, RelatedLinks } from "../components/content";
+import { ToolIntro, Formula, RelatedLinks, breadcrumbJsonLd } from "../components/content";
 import { Faq, faqJsonLd, type FaqItem } from "../components/Faq";
 import { SgpaCalculator } from "../components/calculators/SgpaCalculator";
 
@@ -40,7 +40,18 @@ export const Route = createFileRoute("/sgpa-calculator")({
       { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "/sgpa-calculator/" }],
-    scripts: [{ type: "application/ld+json", children: JSON.stringify(faqJsonLd(faqs)) }],
+    scripts: [
+      { type: "application/ld+json", children: JSON.stringify(faqJsonLd(faqs)) },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          breadcrumbJsonLd([
+            { name: "Stupus", path: "/" },
+            { name: "SGPA Calculator", path: "/sgpa-calculator/" },
+          ]),
+        ),
+      },
+    ],
   }),
   component: SgpaPage,
 });

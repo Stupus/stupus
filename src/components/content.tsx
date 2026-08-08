@@ -84,3 +84,17 @@ export function GradeTable({
     </div>
   );
 }
+
+/** BreadcrumbList JSON-LD for inner pages. Paths are site-relative. */
+export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: it.name,
+      item: it.path,
+    })),
+  };
+}

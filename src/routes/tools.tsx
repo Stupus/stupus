@@ -1,9 +1,11 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { Page, Section } from "../components/Layout";
+import { breadcrumbJsonLd } from "../components/content";
 import { SearchBox } from "../components/SearchBox";
 import { generalToolList } from "../data/tools";
 import { universities } from "../data/universities";
 import { UniversityMissing } from "../components/UniversityMissing";
+import { ToolIconTile } from "../components/ToolIcon";
 
 const title = "All Student Calculators | Stupus";
 const description =
@@ -22,6 +24,17 @@ export const Route = createFileRoute("/tools")({
       { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "/tools/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          breadcrumbJsonLd([
+            { name: "Stupus", path: "/" },
+            { name: "All tools", path: "/tools/" },
+          ]),
+        ),
+      },
+    ],
   }),
   component: ToolsPage,
 });
@@ -43,11 +56,14 @@ function ToolsPage() {
             <li key={t.to}>
               <Link
                 to={t.to as never}
-                className="block px-4 py-3 hover:bg-surface"
+                className="flex min-h-[3.5rem] items-center gap-3 px-4 py-3 transition-colors hover:bg-brand-light"
               >
-                <span className="block text-sm font-semibold">{t.title}</span>
-                <span className="block text-xs text-muted-foreground">
-                  {t.description}
+                {t.icon ? <ToolIconTile name={t.icon} size={38} /> : null}
+                <span className="min-w-0">
+                  <span className="block text-sm font-semibold">{t.title}</span>
+                  <span className="block text-xs text-muted-foreground">
+                    {t.description}
+                  </span>
                 </span>
               </Link>
             </li>
