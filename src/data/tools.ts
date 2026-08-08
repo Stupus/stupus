@@ -17,12 +17,14 @@ const generalTools: ToolEntry[] = [
     to: "/cgpa-calculator",
     description: "Combine your semester SGPAs and credits into a CGPA.",
     keywords: ["cgpa", "cumulative", "grade point average", "overall gpa", "aggregate"],
+    icon: "cgpa",
   },
   {
     title: "SGPA Calculator",
     to: "/sgpa-calculator",
     description: "Work out one semester's SGPA from subject credits and grades.",
     keywords: ["sgpa", "semester", "gpa", "grade points", "semester gpa"],
+    icon: "sgpa",
   },
   {
     title: "Attendance Calculator",
@@ -36,15 +38,17 @@ const generalTools: ToolEntry[] = [
       "shortage",
       "condonation",
     ],
+    icon: "attendance",
   },
   {
     title: "Percentage Calculator",
     to: "/percentage-calculator",
     description: "Turn marks out of a total into a percentage.",
     keywords: ["percentage", "marks", "percent", "score", "total marks"],
+    icon: "percentage",
   },
   {
-    title: "GPA to Percentage Converter",
+    title: "CGPA to Percentage Converter",
     to: "/gpa-converter",
     description: "Convert CGPA to percentage and back, using your university's rule.",
     keywords: [
@@ -54,8 +58,10 @@ const generalTools: ToolEntry[] = [
       "convert",
       "conversion",
     ],
+    icon: "converter",
   },
 ];
+
 
 const universityTools: ToolEntry[] = universities.flatMap((u) => [
   {
