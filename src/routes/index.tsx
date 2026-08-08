@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary" },
     ],
     links: [
-      { rel: "canonical", href: "/" },
+      { rel: "canonical", href: "https://stupus.bond/" },
       { rel: "preload", as: "image", href: "/assets/logo.webp", fetchPriority: "high" },
     ],
     scripts: [
