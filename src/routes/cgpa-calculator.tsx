@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Page, Section, Prose } from "../components/Layout";
-import { ToolIntro, Formula, RelatedLinks } from "../components/content";
+import { ToolIntro, Formula, RelatedLinks, breadcrumbJsonLd } from "../components/content";
 import { Faq, faqJsonLd, type FaqItem } from "../components/Faq";
 import { CgpaCalculator } from "../components/calculators/CgpaCalculator";
 
@@ -41,9 +41,15 @@ export const Route = createFileRoute("/cgpa-calculator")({
     ],
     links: [{ rel: "canonical", href: "/cgpa-calculator/" }],
     scripts: [
+      { type: "application/ld+json", children: JSON.stringify(faqJsonLd(faqs)) },
       {
         type: "application/ld+json",
-        children: JSON.stringify(faqJsonLd(faqs)),
+        children: JSON.stringify(
+          breadcrumbJsonLd([
+            { name: "Stupus", path: "/" },
+            { name: "CGPA Calculator", path: "/cgpa-calculator/" },
+          ]),
+        ),
       },
     ],
   }),
