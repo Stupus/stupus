@@ -81,7 +81,7 @@ const universityTools: ToolEntry[] = universities.flatMap((u) => [
 ]);
 
 export const allTools: ToolEntry[] = [...generalTools, ...universityTools];
-export const popularTools = generalTools.slice(0, 4);
+
 export const generalToolList = generalTools;
 
 /** Tiny token-overlap search — no dependencies, runs instantly. */
