@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CalcButton, CalcCard, Field, ResultPanel, SelectField } from "../form";
+import { CalcButton, CalcCard, ErrorSummary, Field, ResultPanel, SelectField } from "../form";
 import {
   RULE_MINUS_075,
   RULE_TIMES_10,
@@ -59,6 +59,7 @@ export function GpaConverter({
 
   return (
     <CalcCard>
+      <ErrorSummary messages={error ? [error] : []} />
       <form onSubmit={calculate} noValidate className="flex flex-wrap items-start gap-4">
         <SelectField
           id="direction"
