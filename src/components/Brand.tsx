@@ -1,36 +1,33 @@
 import { useState } from "react";
 
 /**
- * Stupus wordmark. Uses /assets/logo.png when present (added manually),
- * and falls back to a text wordmark until then.
+ * Stupus wordmark: compact WebP mark plus text, with a text-only fallback
+ * if the image ever fails to load.
  */
 export function BrandLogo({ className = "" }: { className?: string }) {
   const [failed, setFailed] = useState(false);
 
-  if (failed) {
-    return (
-      <span
-        className={`text-[1.35rem] font-bold tracking-tight text-brand ${className}`}
-      >
-        Stupus
-      </span>
-    );
-  }
-
   return (
-    <img
-      src="/assets/logo.png"
-      alt="Stupus"
-      width={132}
-      height={32}
-      className={`h-8 w-auto ${className}`}
-      onError={() => setFailed(true)}
-    />
+    <span className={`flex items-center gap-2 ${className}`}>
+      {failed ? null : (
+        <img
+          src="/assets/logo.webp"
+          alt=""
+          width={28}
+          height={28}
+          decoding="async"
+          fetchPriority="high"
+          className="h-7 w-7 shrink-0"
+          onError={() => setFailed(true)}
+        />
+      )}
+      <span className="text-[1.3rem] font-bold tracking-tight text-brand">Stupus</span>
+    </span>
   );
 }
 
 /**
- * University logo (manually added .webp). Falls back to the university's
+ * University logo (compact .webp). Falls back to the university's
  * initials on an accent tile so cards never break.
  */
 export function UniversityLogo({
