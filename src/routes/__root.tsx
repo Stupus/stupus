@@ -77,23 +77,38 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Stupus — Student Calculators" },
+      {
+        name: "description",
+        content:
+          "Free CGPA, SGPA, attendance and percentage calculators for Indian students.",
+      },
+      { property: "og:site_name", content: "Stupus" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/favicon.png" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Stupus",
+          url: "/",
+          logo: "/assets/logo.webp",
+        }),
+      },
     ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
