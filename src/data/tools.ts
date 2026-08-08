@@ -1,4 +1,5 @@
 import { universities } from "./universities";
+import type { ToolIconName } from "../components/ToolIcon";
 
 export interface ToolEntry {
   title: string;
@@ -6,7 +7,9 @@ export interface ToolEntry {
   description: string;
   keywords: string[];
   university?: string;
+  icon?: ToolIconName;
 }
+
 
 const generalTools: ToolEntry[] = [
   {
