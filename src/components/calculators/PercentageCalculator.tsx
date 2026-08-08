@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CalcButton, CalcCard, Field, ResultPanel } from "../form";
+import { CalcButton, CalcCard, ErrorSummary, Field, ResultPanel } from "../form";
 import { percentage, round } from "../../lib/calc";
 
 export function PercentageCalculator() {
@@ -33,6 +33,7 @@ export function PercentageCalculator() {
 
   return (
     <CalcCard>
+      <ErrorSummary messages={Object.values(errors)} />
       <form onSubmit={calculate} noValidate className="flex flex-wrap items-start gap-4">
         <Field
           id="obtained"

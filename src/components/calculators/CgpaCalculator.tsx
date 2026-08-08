@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CalcButton, CalcCard, Field, ResultPanel } from "../form";
+import { CalcButton, CalcCard, ErrorSummary, Field, ResultPanel } from "../form";
 import { cgpa, cgpaToPercentage, round, type ConversionRule } from "../../lib/calc";
 
 interface Row {
@@ -58,6 +58,7 @@ export function CgpaCalculator({
 
   return (
     <CalcCard>
+      <ErrorSummary messages={Object.values(errors)} />
       <form onSubmit={calculate} noValidate>
         <div className="grid grid-cols-[1fr_auto_auto] items-end gap-x-3 gap-y-3">
           <span className="text-xs font-medium text-muted-foreground">Semester</span>

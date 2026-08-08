@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CalcButton, CalcCard, Field, ResultPanel, SelectField } from "../form";
+import { CalcButton, CalcCard, ErrorSummary, Field, ResultPanel, SelectField } from "../form";
 import { round, sgpa } from "../../lib/calc";
 import type { GradeRow } from "../../data/universities";
 
@@ -94,6 +94,7 @@ export function SgpaCalculator({
 
   return (
     <CalcCard>
+      <ErrorSummary messages={Object.values(errors)} />
       <form onSubmit={calculate} noValidate>
         <div className="grid grid-cols-[1fr_auto_auto] items-end gap-x-3 gap-y-3">
           <span className="text-xs font-medium text-muted-foreground">Subject</span>

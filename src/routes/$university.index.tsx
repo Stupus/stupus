@@ -2,6 +2,7 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { Page, Section, Prose } from "../components/Layout";
 import { GradeTable, breadcrumbJsonLd } from "../components/content";
 import { UniversityLogo } from "../components/Brand";
+import { ToolIconTile, toolIconForSlug } from "../components/ToolIcon";
 import { getUniversity, themeStyle } from "../data/universities";
 
 export const Route = createFileRoute("/$university/")({
@@ -72,9 +73,12 @@ function UniversityHub() {
               <Link
                 to="/$university/$tool"
                 params={{ university: u.slug, tool: t.slug }}
-                className="block rounded-lg border border-border bg-card px-4 py-3 text-sm font-semibold transition-colors hover:border-brand-border hover:bg-brand-light hover:text-brand"
+                className="flex items-center gap-3 rounded-lg border border-border bg-card px-4 py-3 text-sm font-semibold transition-colors hover:border-brand-border hover:bg-brand-light hover:text-brand"
               >
-                {u.shortName} {t.label}
+                <ToolIconTile name={toolIconForSlug(t.slug)} size={34} />
+                <span>
+                  {u.shortName} {t.label}
+                </span>
               </Link>
             </li>
           ))}

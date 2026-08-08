@@ -170,6 +170,33 @@ export function ResultPanel({
   );
 }
 
+/**
+ * Mistake summary shown at the top of a calculator box so the user sees
+ * every problem at once, not just the field they are looking at.
+ */
+export function ErrorSummary({ messages }: { messages: string[] }) {
+  const unique = Array.from(new Set(messages.filter(Boolean)));
+  if (unique.length === 0) return null;
+  return (
+    <div
+      role="alert"
+      aria-live="assertive"
+      className="mb-4 rounded-md border border-error bg-error-light px-3 py-2.5 duration-150 animate-in fade-in"
+    >
+      <p className="text-sm font-semibold text-error">
+        {unique.length === 1
+          ? "Please fix this before calculating:"
+          : `Please fix these ${unique.length} things before calculating:`}
+      </p>
+      <ul className="mt-1 list-disc space-y-0.5 pl-5 text-sm text-error">
+        {unique.map((m) => (
+          <li key={m}>{m}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export function FormError({ message }: { message: string }) {
   return (
     <p role="alert" className="mt-3 text-sm text-error">

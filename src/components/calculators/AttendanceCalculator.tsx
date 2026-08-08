@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CalcButton, CalcCard, Field, ResultPanel } from "../form";
+import { CalcButton, CalcCard, ErrorSummary, Field, ResultPanel } from "../form";
 import { attendance, round } from "../../lib/calc";
 
 export function AttendanceCalculator({ defaultRequired = "75" }: { defaultRequired?: string }) {
@@ -41,6 +41,7 @@ export function AttendanceCalculator({ defaultRequired = "75" }: { defaultRequir
 
   return (
     <CalcCard>
+      <ErrorSummary messages={Object.values(errors)} />
       <form onSubmit={calculate} noValidate className="flex flex-wrap items-start gap-4">
         <Field
           id="attended"
