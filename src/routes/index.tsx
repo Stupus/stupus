@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "/" },
-      { rel: "preload", as: "image", href: "/assets/logo.webp", fetchpriority: "high" },
+      { rel: "preload", as: "image", href: "/assets/logo.webp", fetchPriority: "high" },
     ],
     scripts: [
       {
