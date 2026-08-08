@@ -127,3 +127,12 @@ export function ToolIconTile({
     </span>
   );
 }
+
+/** Maps a tool slug (e.g. "cgpa-calculator") to its icon name. */
+export function toolIconForSlug(slug: string): ToolIconName {
+  if (slug.includes("sgpa")) return "sgpa";
+  if (slug.includes("cgpa")) return "cgpa";
+  if (slug.includes("attendance")) return "attendance";
+  if (slug.includes("percentage")) return "percentage";
+  return "converter";
+}
