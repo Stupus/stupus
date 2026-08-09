@@ -4,7 +4,7 @@ import { ToolIntro, Formula, RelatedLinks, breadcrumbJsonLd } from "../component
 import { Faq, faqJsonLd, type FaqItem } from "../components/Faq";
 import { AttendanceCalculator } from "../components/calculators/AttendanceCalculator";
 
-const title = "Attendance Calculator — How many classes can I miss? | Stupus";
+const title = "Attendance Calculator Online";
 const description =
   "Check your attendance percentage and see how many classes you can skip, or how many you must attend to reach 75%.";
 
