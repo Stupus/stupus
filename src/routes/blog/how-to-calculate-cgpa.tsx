@@ -298,7 +298,7 @@ Semester 3: 8.4 × 21 = 176.4`}
           </p>
 
           <a
-            href="/cgpa-to-percentage"
+            href="/blog/how-to-calculate-percentage-from-cgpa"
             className="inline-flex rounded-lg border border-blue-200 bg-blue-50 px-5 py-3 font-semibold text-blue-700 transition hover:bg-blue-100"
           >
             Learn how to convert CGPA to percentage →
