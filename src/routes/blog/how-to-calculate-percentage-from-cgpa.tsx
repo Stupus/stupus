@@ -11,7 +11,7 @@ export const Route = createFileRoute(
       {
         name: "description",
         content:
-          "Learn how to calculate percentage from CGPA step by step, understand common conversion formulas, and find out why the correct formula depends on your university.",
+          "Learn how to calculate percentage from CGPA step by step with examples, formulas, and important conversion rules.",
       },
     ],
     links: [
@@ -49,13 +49,13 @@ function HowToCalculatePercentageFromCgpa() {
           </h1>
 
           <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">
-            Want to convert your CGPA into a percentage? The calculation is
-            straightforward once you know your university&apos;s conversion
-            rule. This guide explains the process, common formulas, examples,
-            and important things to check before using the result.
+            Learn how to calculate percentage from CGPA using a simple
+            step-by-step method. This guide explains the conversion formula,
+            shows examples, and explains why the correct formula can depend on
+            your university.
           </p>
 
-          {/* Explanation card */}
+          {/* Image / explanation card */}
           <div className="mt-8 rounded-2xl border border-blue-200 bg-blue-50 p-5">
             <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
               <img
@@ -66,93 +66,83 @@ function HowToCalculatePercentageFromCgpa() {
 
               <div>
                 <p className="font-semibold text-blue-900">
-                  The important part
+                  The basic idea
                 </p>
 
                 <p className="mt-2 leading-7 text-blue-800">
-                  There is no single CGPA-to-percentage formula that applies to
-                  every university. Always check the conversion rule specified
-                  by your university before using the result for an official
-                  purpose.
+                  CGPA is usually represented on a grade-point scale, while
+                  percentage is represented out of 100. To convert CGPA into a
+                  percentage, you need to use the conversion formula specified
+                  by your university or institution.
                 </p>
               </div>
             </div>
           </div>
         </header>
 
-        {/* Transport to CGPA guide */}
-        <section className="mb-12 rounded-2xl border border-blue-200 bg-blue-50 p-7">
-          <h2 className="text-2xl font-bold text-slate-900">
-            First, learn how to calculate CGPA
-          </h2>
+        {/* How to calculate CGPA */}
+        <Section title="First, know your CGPA">
+          <p>
+            Before converting CGPA into a percentage, you need to know your
+            cumulative grade point average.
+          </p>
 
-          <p className="mt-2 leading-7 text-slate-600">
-            If you are not sure how your CGPA is calculated from your semester
-            results, read our step-by-step guide first.
+          <p>
+            If you are not sure how CGPA is calculated from your semester
+            results, SGPA, and credits, you can read our complete guide first.
           </p>
 
           <a
             href="/blog/how-to-calculate-cgpa"
-            className="mt-5 inline-flex rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white transition hover:bg-blue-700"
+            className="inline-flex rounded-lg border border-blue-200 bg-blue-50 px-5 py-3 font-semibold text-blue-700 transition hover:bg-blue-100"
           >
-            How to Calculate CGPA →
+            Learn how to calculate CGPA →
           </a>
-        </section>
+        </Section>
 
-        {/* What is CGPA */}
+        {/* What is percentage? */}
+        <Section title="What is percentage?">
+          <p>
+            Percentage is a way of expressing an academic result on a scale of
+            100.
+          </p>
+
+          <p>
+            For example, a percentage of 80% means that the result corresponds
+            to 80 out of 100.
+          </p>
+
+          <p>
+            CGPA and percentage use different scales, so a conversion formula
+            is required when you want to express a CGPA as a percentage.
+          </p>
+        </Section>
+
+        {/* What is CGPA? */}
         <Section title="What is CGPA?">
           <p>
-            CGPA stands for{" "}
-            <strong>Cumulative Grade Point Average</strong>. It represents your
-            overall academic performance across the semesters included in your
-            cumulative result.
+            CGPA stands for <strong>Cumulative Grade Point Average</strong>. It
+            represents your overall academic performance across the semesters
+            included in your cumulative result.
           </p>
 
           <p>
-            A CGPA is normally expressed on a grade-point scale such as 10.00,
-            although the scale can differ between institutions.
+            The CGPA scale can vary depending on the grading system used by
+            your university. A common scale is 10 points, but not every
+            institution necessarily uses the same scale.
           </p>
-        </Section>
-
-        {/* What is percentage */}
-        <Section title="What does percentage mean?">
-          <p>
-            Percentage expresses a result on a scale of 100. For example, a
-            result of 82% means 82 out of every 100 percentage points.
-          </p>
-
-          <p>
-            CGPA and percentage are different ways of representing academic
-            performance, so converting between them requires a conversion rule.
-          </p>
-        </Section>
-
-        {/* Direct conversion */}
-        <Section title="Can you calculate percentage directly from CGPA?">
-          <p>
-            Yes, but you need to know the conversion formula used by your
-            university or institution.
-          </p>
-
-          <p>
-            Some institutions publish a direct multiplier, while others use a
-            formula involving a constant or a different grading-system
-            conversion. Because of this, you should not assume that one formula
-            works everywhere.
-          </p>
-
-          <Note>
-            <strong>For official applications:</strong> use the conversion
-            formula stated on your university&apos;s official documents,
-            marksheet, regulations, or certificate whenever one is provided.
-          </Note>
         </Section>
 
         {/* Formula */}
-        <Section title="The basic conversion method">
+        <Section title="CGPA to percentage formula">
           <p>
-            If your university gives you a formula in the form of a multiplier,
-            the calculation is:
+            There is no single conversion formula that is officially correct
+            for every university.
+          </p>
+
+          <p>
+            If your university provides a conversion factor, the calculation
+            generally follows this form:
           </p>
 
           <Formula>
@@ -160,83 +150,99 @@ function HowToCalculatePercentageFromCgpa() {
           </Formula>
 
           <p>
-            For example, if an institution specifically states that percentage
-            is calculated by multiplying CGPA by 9.5, then a CGPA of 8.2 would
-            be:
+            For example, suppose your university specifies a conversion factor
+            of 9.5. If your CGPA is 8.2:
           </p>
 
-          <Calc>8.2 × 9.5 = 77.9%</Calc>
+          <Calc>Percentage = 8.2 × 9.5 = 77.9%</Calc>
 
-          <p>
-            This example demonstrates the method only. You should use 9.5 only
-            when your university actually specifies that conversion factor.
-          </p>
+          <Note>
+            The 9.5 factor in this example is only an example. Do not assume
+            that 9.5 is the correct conversion factor for your university.
+            Always check the official conversion rule.
+          </Note>
         </Section>
 
-        {/* Step-by-step */}
-        <Section title="Step-by-step example">
+        {/* Step by step */}
+        <Section title="How to calculate percentage from CGPA step by step">
           <Step n="1" title="Find your CGPA">
             <p>
-              Start with the CGPA shown on your result or calculated from your
-              semesters. For this example:
+              First, find the CGPA shown on your marksheet, grade report, or
+              calculated from your semester results.
             </p>
 
-            <Result>CGPA = 8.5</Result>
+            <Result>Example CGPA = 8.5</Result>
           </Step>
 
           <Step n="2" title="Find your university's conversion formula">
             <p>
-              Check your university&apos;s official rules to find the factor or
-              formula it uses to convert CGPA into percentage.
+              Check your university's official academic regulations,
+              examination guidelines, marksheet instructions, or other official
+              documents.
             </p>
 
             <p>
-              For an example only, suppose the university specifies a factor of
-              9.5.
+              Suppose, for this example, that the university specifies a
+              conversion factor of 9.5.
             </p>
           </Step>
 
-          <Step n="3" title="Apply the formula">
-            <Calc>Percentage = 8.5 × 9.5</Calc>
+          <Step n="3" title="Multiply your CGPA by the conversion factor">
+            <p>
+              Put your CGPA into the formula and multiply it by the factor
+              specified by your university.
+            </p>
+
+            <Calc>8.5 × 9.5 = 80.75</Calc>
           </Step>
 
-          <Step n="4" title="Calculate the result">
-            <Result>Percentage = 80.75%</Result>
+          <Step n="4" title="Add the percentage sign">
+            <p>
+              Since the result is being expressed as a percentage, the final
+              value is:
+            </p>
+
+            <Result>80.75%</Result>
           </Step>
         </Section>
 
-        {/* Why 9.5 isn't universal */}
-        <Section title="Why you should not blindly use CGPA × 9.5">
+        {/* Complete example */}
+        <Section title="Complete CGPA to percentage example">
           <p>
-            You may see the formula <strong>CGPA × 9.5</strong> frequently
-            online. However, that does not mean it is the official formula for
-            every university.
-          </p>
-
-          <p>
-            Different institutions can use different grading systems and
-            conversion rules. Using a formula from another university could
-            therefore give you an incorrect percentage.
-          </p>
-
-          <p>
-            If you are submitting your percentage for admission, a scholarship,
-            employment, an application form, or another official purpose, use
-            the conversion method required by the institution receiving the
-            result.
-          </p>
-        </Section>
-
-        {/* Table */}
-        <Section title="CGPA to percentage examples">
-          <p>
-            The table below shows examples using a hypothetical conversion
-            factor of 9.5. These values are examples, not a universal
-            conversion table.
+            Suppose a student has a CGPA of 8.4 and their university specifies
+            that percentage should be calculated by multiplying CGPA by 9.5.
           </p>
 
           <Table
-            headers={["CGPA", "Example calculation", "Example percentage"]}
+            headers={["Value", "Result"]}
+            rows={[
+              ["CGPA", "8.4"],
+              ["Conversion factor", "9.5"],
+              ["Calculation", "8.4 × 9.5"],
+              ["Percentage", "79.80%"],
+            ]}
+          />
+
+          <div className="mt-5 rounded-xl border border-blue-200 bg-blue-50 p-5">
+            <p className="font-semibold text-blue-900">
+              Final calculation
+            </p>
+
+            <p className="mt-2 text-blue-800">
+              8.4 × 9.5 = <strong>79.80%</strong>
+            </p>
+          </div>
+        </Section>
+
+        {/* Examples */}
+        <Section title="CGPA to percentage examples">
+          <p>
+            The following examples use a hypothetical conversion factor of
+            9.5. They are provided to demonstrate the calculation method.
+          </p>
+
+          <Table
+            headers={["CGPA", "Calculation", "Percentage"]}
             rows={[
               ["6.0", "6.0 × 9.5", "57.00%"],
               ["6.5", "6.5 × 9.5", "61.75%"],
@@ -250,138 +256,209 @@ function HowToCalculatePercentageFromCgpa() {
           />
         </Section>
 
-        {/* Correct formula */}
-        <Section title="How to find the correct formula for your university">
+        {/* Why 9.5 */}
+        <Section title="Why do people use CGPA × 9.5?">
           <p>
-            If you are unsure about the conversion, do not guess. Look for the
-            official conversion rule in your university&apos;s academic
-            regulations, examination guidelines, marksheet instructions, or
-            certificate.
+            You may have seen the formula{" "}
+            <strong>CGPA × 9.5</strong> on many websites and calculators.
+          </p>
+
+          <p>
+            This conversion factor has been used in particular grading
+            contexts, which is why it appears frequently in online
+            explanations.
+          </p>
+
+          <p>
+            However, you should not automatically apply it to every university.
+            Universities can have their own grading and conversion rules.
+          </p>
+
+          <Note>
+            If your university provides a specific CGPA-to-percentage formula,
+            use that formula instead of assuming that CGPA × 9.5 applies to
+            you.
+          </Note>
+        </Section>
+
+        {/* University formula */}
+        <Section title="Does every university use the same formula?">
+          <p>
+            No. The conversion method can vary between universities,
+            institutions, and grading systems.
+          </p>
+
+          <p>
+            Some institutions may use a fixed multiplier. Others may provide a
+            different mathematical formula or a conversion table.
+          </p>
+
+          <p>
+            This is especially important when your percentage is being used for
+            an official application.
+          </p>
+        </Section>
+
+        {/* Finding formula */}
+        <Section title="How to find the correct conversion formula">
+          <p>
+            If you do not know which formula to use, check your university's
+            official information first.
           </p>
 
           <div className="rounded-xl border border-blue-200 bg-blue-50 p-5">
             <p className="font-semibold text-blue-900">
-              A useful checklist
+              Check these sources:
             </p>
 
             <ul className="mt-3 list-disc space-y-2 pl-5 text-blue-800">
-              <li>Check your university&apos;s official website.</li>
-              <li>
-                Check your examination regulations or academic handbook.
-              </li>
-              <li>
-                Check instructions printed on your marksheet or certificate.
-              </li>
-              <li>
-                Ask your examination or academic office if the rule is unclear.
-              </li>
+              <li>Your marksheet or grade report</li>
+              <li>Your university's academic regulations</li>
+              <li>Examination or grading guidelines</li>
+              <li>Official university documents</li>
+              <li>Your examination or academic office</li>
             </ul>
           </div>
         </Section>
 
-        {/* No formula */}
-        <Section title="What if my university does not provide a formula?">
+        {/* Official applications */}
+        <Section title="Using CGPA percentage for official purposes">
           <p>
-            Do not automatically choose a formula from a random calculator
-            website. Conversion rules are institution-specific, so the safest
-            option is to confirm the method with your university or the
-            organization requesting the percentage.
+            If you are converting CGPA for college admission, scholarships,
+            employment, competitive examinations, or another official
+            application, be careful about which formula you use.
+          </p>
+
+          <p>
+            The organization receiving your application may require a specific
+            conversion method. If they provide instructions, follow those
+            instructions instead of relying on a general online formula.
           </p>
         </Section>
 
-        {/* Comparison */}
-        <Section title="Is CGPA the same as percentage?">
-          <p>
-            No. CGPA is a grade-point measure, while percentage is expressed on
-            a scale of 100. A conversion formula is needed to translate one
-            into the other.
-          </p>
-
-          <Table
-            headers={["CGPA", "Percentage"]}
-            rows={[
-              ["Grade-point based", "100-point based"],
-              ["Usually cumulative", "Usually expressed out of 100"],
-              [
-                "Conversion depends on institution",
-                "Conversion depends on institution",
-              ],
-            ]}
-          />
-        </Section>
-
-        {/* Mistakes */}
-        <Section title="Common mistakes when converting CGPA">
+        {/* Common mistakes */}
+        <Section title="Common mistakes when converting CGPA to percentage">
           <div className="space-y-4">
             <Mistake
-              title="Using the first formula you find online"
-              text="A formula that is correct for one university may not be correct for another."
+              title="Using CGPA × 9.5 automatically"
+              text="The 9.5 factor is not a universal rule. Your university may use a different formula."
             />
 
             <Mistake
-              title="Confusing CGPA with SGPA"
-              text="SGPA normally represents one semester, while CGPA represents cumulative performance."
+              title="Using another university's formula"
+              text="A conversion method that works for one institution may not apply to another."
+            />
+
+            <Mistake
+              title="Confusing SGPA and CGPA"
+              text="SGPA generally represents a particular semester, while CGPA represents cumulative academic performance."
             />
 
             <Mistake
               title="Rounding too early"
               text="Keep the original CGPA precision during the calculation and round the final percentage according to the required rules."
             />
-
-            <Mistake
-              title="Using an unofficial conversion for an official application"
-              text="If an organization specifies a conversion method, follow that method instead of choosing your own."
-            />
           </div>
         </Section>
 
-        {/* Stupus */}
-        <Section title="How Stupus can help">
+        {/* CGPA vs percentage */}
+        <Section title="CGPA vs percentage">
+          <Table
+            headers={["CGPA", "Percentage"]}
+            rows={[
+              ["Grade-point based", "Expressed on a scale of 100"],
+              ["Usually cumulative", "Usually expressed as a percentage"],
+              ["Uses a grading scale", "Uses a percentage scale"],
+              [
+                "Needs a conversion rule to become percentage",
+                "Can be calculated using the applicable conversion rule",
+              ],
+            ]}
+          />
+        </Section>
+
+        {/* What if formula isn't known */}
+        <Section title="What if I don't know my university's formula?">
           <p>
-            If you already know your CGPA and your university&apos;s conversion
-            method, the Stupus CGPA to Percentage Calculator can save you from
-            doing the arithmetic manually.
+            Do not simply choose a formula from a random calculator or website
+            if you need the result for an official purpose.
           </p>
 
           <p>
-            This guide explains the calculation so you can understand where the
-            result comes from instead of treating the calculator as a black
-            box.
+            First, look for the conversion rule in your university's official
+            documents. If you still cannot find it, contact the relevant
+            examination or academic office.
           </p>
         </Section>
+
+        {/* Calculator */}
+        <Section title="Calculate CGPA to percentage with Stupus">
+          <p>
+            Once you know the correct conversion formula, you can use the
+            Stupus CGPA to Percentage Calculator to perform the calculation
+            quickly.
+          </p>
+
+          <p>
+            You can use the calculator for a quick result while still
+            understanding how the calculation works from this guide.
+          </p>
+        </Section>
+
+        <section className="mt-12 rounded-2xl border border-blue-200 bg-blue-50 p-7 text-center">
+          <h2 className="text-2xl font-bold text-slate-900">
+            Convert your CGPA to percentage
+          </h2>
+
+          <p className="mt-2 text-slate-600">
+            Calculate your percentage from CGPA with the Stupus calculator.
+          </p>
+
+          <a
+            href="/cgpa-to-percentage"
+            className="mt-5 inline-flex rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white transition hover:bg-blue-700"
+          >
+            Open CGPA to Percentage Calculator
+          </a>
+        </section>
 
         {/* FAQ */}
         <Section title="Frequently asked questions">
           <Faq
-            question="What is the formula to convert CGPA to percentage?"
-            answer="There is no single universal formula. Use the conversion formula specified by your university. If your university provides a multiplier, the calculation is percentage = CGPA × conversion factor."
+            question="How do I calculate percentage from CGPA?"
+            answer="First find the conversion formula specified by your university. If the formula is percentage = CGPA × conversion factor, multiply your CGPA by that factor and express the result as a percentage."
           />
 
           <Faq
-            question="Can I use CGPA × 9.5 for every university?"
-            answer="No. Use 9.5 only when the relevant university or institution specifies that factor."
+            question="Can I multiply CGPA by 9.5?"
+            answer="Only if the applicable university or institution uses 9.5 as its conversion factor. It should not be assumed to be a universal formula."
           />
 
           <Faq
             question="What percentage is 8.5 CGPA?"
-            answer="It depends on the conversion rule. For example, with a hypothetical 9.5 factor, 8.5 × 9.5 = 80.75%, but another university may produce a different result."
+            answer="It depends on the conversion formula. For example, if the applicable factor is 9.5, then 8.5 × 9.5 = 80.75%."
           />
 
           <Faq
-            question="Should I use the converted percentage on an official form?"
-            answer="Use the method required by the university, employer, admissions office, or other organization requesting the percentage."
+            question="Is CGPA the same as percentage?"
+            answer="No. CGPA is a grade-point measure, while percentage is expressed out of 100. A conversion rule is required to convert between them."
+          />
+
+          <Faq
+            question="Can I use an online CGPA to percentage calculator for an official application?"
+            answer="You can use a calculator to perform the arithmetic, but make sure the formula used by the calculator matches the official conversion rule required by your university or the organization receiving your application."
           />
         </Section>
 
-        {/* Transport to CGPA guide again */}
+        {/* Transport back to CGPA guide */}
         <section className="mt-12 rounded-2xl border border-blue-200 bg-blue-50 p-7">
           <h2 className="text-2xl font-bold text-slate-900">
-            Want to learn how your CGPA is calculated?
+            Want to learn how to calculate CGPA?
           </h2>
 
           <p className="mt-2 leading-7 text-slate-600">
-            Read our complete guide to calculating CGPA from your semester
-            results, SGPAs, and credits.
+            Learn how to calculate CGPA from your semester SGPAs and credits
+            with our step-by-step guide.
           </p>
 
           <a
@@ -389,24 +466,6 @@ function HowToCalculatePercentageFromCgpa() {
             className="mt-5 inline-flex rounded-lg border border-blue-200 bg-white px-5 py-3 font-semibold text-blue-700 transition hover:bg-blue-50"
           >
             How to Calculate CGPA →
-          </a>
-        </section>
-
-        {/* Calculator CTA */}
-        <section className="mt-12 rounded-2xl border border-blue-200 bg-blue-50 p-7 text-center">
-          <h2 className="text-2xl font-bold text-slate-900">
-            Convert your CGPA to percentage
-          </h2>
-
-          <p className="mt-2 text-slate-600">
-            Use the Stupus calculator for a quick calculation.
-          </p>
-
-          <a
-            href="/cgpa-to-percentage"
-            className="mt-5 inline-flex rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white transition hover:bg-blue-700"
-          >
-            CGPA to Percentage Calculator
           </a>
         </section>
       </article>
