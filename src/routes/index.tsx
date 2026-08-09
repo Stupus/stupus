@@ -7,7 +7,7 @@ import { universities } from "../data/universities";
 import { generalToolList } from "../data/tools";
 import { UniversityMissing } from "../components/UniversityMissing";
 
-const title = "CGPA & SGPA Calculator for Indian Students | Stupus";
+const title = "Student's Hub | Stupus";
 const description =
   "Free CGPA, SGPA, attendance and percentage calculators — plus VTU, JNTUH, JNTUK, Anna University and AKTU versions that use each university's own grading rules.";
 
