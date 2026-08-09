@@ -16,7 +16,7 @@ type UniversityContent = Record<string, ToolContent>;
 export const universityContent: Record<string, UniversityContent> = {
   vtu: {
     "cgpa-calculator": {
-      h1: "VTU CGPA Calculator",
+      h1: "VTU CGPA Calculator online ",
       title: "VTU CGPA Calculator",
       description:
         "Calculate your VTU CGPA from semester SGPAs and credits, and convert it with VTU's official (CGPA − 0.75) × 10 formula.",
@@ -48,7 +48,7 @@ export const universityContent: Record<string, UniversityContent> = {
     },
     "sgpa-calculator": {
       h1: "VTU SGPA Calculator",
-      title: "VTU SGPA Calculator — semester GPA from credits | Stupus",
+      title: "VTU SGPA Calculator online ",
       description:
         "Work out your VTU SGPA for one semester using subject credits and the VTU 10-point grade scale.",
       intro:
@@ -74,7 +74,7 @@ export const universityContent: Record<string, UniversityContent> = {
     },
     "percentage-calculator": {
       h1: "VTU Percentage Calculator",
-      title: "VTU CGPA to Percentage Calculator (−0.75 rule) | Stupus",
+      title: "VTU CGPA to Percentage Calculator",
       description:
         "Convert your VTU CGPA into a percentage using VTU's official (CGPA − 0.75) × 10 formula, or convert back.",
       intro:
@@ -103,7 +103,7 @@ export const universityContent: Record<string, UniversityContent> = {
   jntuh: {
     "cgpa-calculator": {
       h1: "JNTUH CGPA Calculator",
-      title: "JNTUH CGPA Calculator — R18 regulations | Stupus",
+      title: "JNTUH CGPA Calculator online ",
       description:
         "Calculate your JNTUH CGPA from semester SGPAs and credits, following the R18 B.Tech academic regulations.",
       intro:
@@ -134,7 +134,7 @@ export const universityContent: Record<string, UniversityContent> = {
     },
     "sgpa-calculator": {
       h1: "JNTUH SGPA Calculator",
-      title: "JNTUH SGPA Calculator — R18 grade points | Stupus",
+      title: "JNTUH SGPA Calculator online",
       description:
         "Calculate your JNTUH semester SGPA using the R18 absolute grading scale and subject credits.",
       intro:
@@ -160,7 +160,7 @@ export const universityContent: Record<string, UniversityContent> = {
     },
     "percentage-calculator": {
       h1: "JNTUH Percentage Calculator",
-      title: "JNTUH CGPA to Percentage — (CGPA − 0.5) × 10 | Stupus",
+      title: "JNTUH CGPA to Percentage online",
       description:
         "Convert JNTUH CGPA to percentage with the R18 rule, percentage of marks = (final CGPA − 0.5) × 10.",
       intro:
@@ -189,7 +189,7 @@ export const universityContent: Record<string, UniversityContent> = {
   jntuk: {
     "cgpa-calculator": {
       h1: "JNTUK CGPA Calculator",
-      title: "JNTUK CGPA Calculator — Kakinada 10-point scale | Stupus",
+      title: "JNTUK CGPA Calculator online",
       description:
         "Calculate your JNTUK CGPA from semester SGPAs and credits, and convert with the (CGPA − 0.75) × 10 rule.",
       intro:
@@ -215,7 +215,7 @@ export const universityContent: Record<string, UniversityContent> = {
     },
     "sgpa-calculator": {
       h1: "JNTUK SGPA Calculator",
-      title: "JNTUK SGPA Calculator — semester grade point average | Stupus",
+      title: "JNTUK SGPA Calculator online",
       description:
         "Calculate your JNTUK semester SGPA from subject credits and letter grades on the 10-point scale.",
       intro: "Add every subject of the semester with its credits and grade.",
@@ -240,7 +240,7 @@ export const universityContent: Record<string, UniversityContent> = {
     },
     "percentage-calculator": {
       h1: "JNTUK Percentage Calculator",
-      title: "JNTUK CGPA to Percentage Converter | Stupus",
+      title: "JNTUK CGPA to Percentage Converter online",
       description:
         "Convert your JNTUK CGPA to a percentage using the (CGPA − 0.75) × 10 rule from JNTUK's regulations.",
       intro: "Enter your JNTUK CGPA to see the equivalent percentage of marks.",
@@ -264,7 +264,7 @@ export const universityContent: Record<string, UniversityContent> = {
   "anna-university": {
     "cgpa-calculator": {
       h1: "Anna University CGPA Calculator",
-      title: "Anna University CGPA Calculator — Regulation 2023 | Stupus",
+      title: "Anna University CGPA Calculator online",
       description:
         "Calculate your Anna University CGPA from semester GPAs and credits, following Regulation 2023.",
       intro:
@@ -290,7 +290,7 @@ export const universityContent: Record<string, UniversityContent> = {
     },
     "sgpa-calculator": {
       h1: "Anna University GPA Calculator",
-      title: "Anna University GPA Calculator — R2023 grade points | Stupus",
+      title: "Anna University GPA Calculator online",
       description:
         "Calculate your Anna University semester GPA using the Regulation 2023 absolute grading scale.",
       intro:
@@ -317,7 +317,7 @@ export const universityContent: Record<string, UniversityContent> = {
     },
     "percentage-calculator": {
       h1: "Anna University Percentage Calculator",
-      title: "Anna University CGPA to Percentage (CGPA × 10) | Stupus",
+      title: "Anna University CGPA to Percentage online",
       description:
         "Convert Anna University CGPA to percentage using clause 21.10 of Regulation 2023: percentage = CGPA × 10.",
       intro: "Enter your CGPA to convert it with Anna University's own rule.",
@@ -341,7 +341,7 @@ export const universityContent: Record<string, UniversityContent> = {
   aktu: {
     "cgpa-calculator": {
       h1: "AKTU CGPA Calculator",
-      title: "AKTU CGPA Calculator — 10-point credit system | Stupus",
+      title: "AKTU CGPA Calculator online",
       description:
         "Calculate your AKTU (formerly UPTU) CGPA from semester SGPAs and credits on the 10-point scale.",
       intro:
@@ -367,7 +367,7 @@ export const universityContent: Record<string, UniversityContent> = {
     },
     "sgpa-calculator": {
       h1: "AKTU SGPA Calculator",
-      title: "AKTU SGPA Calculator — semester grade point average | Stupus",
+      title: "AKTU SGPA Calculator online",
       description:
         "Calculate your AKTU semester SGPA from subject credits and grade points on the 10-point scale.",
       intro: "Add each subject with its credits and grade points for the semester.",
@@ -388,7 +388,7 @@ export const universityContent: Record<string, UniversityContent> = {
     },
     "percentage-calculator": {
       h1: "AKTU Percentage Calculator",
-      title: "AKTU CGPA to Percentage Converter | Stupus",
+      title: "AKTU CGPA to Percentage Converter online ",
       description:
         "Convert AKTU CGPA to percentage. Pick the conversion rule your grade card or examination cell confirms.",
       intro:
