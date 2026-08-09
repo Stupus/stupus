@@ -11,7 +11,7 @@ export const Route = createFileRoute(
       {
         name: "description",
         content:
-          "Learn how to calculate percentage from CGPA, understand common conversion formulas, and find out why the correct formula depends on your university.",
+          "Learn how to calculate percentage from CGPA step by step, understand common conversion formulas, and find out why the correct formula depends on your university.",
       },
     ],
     links: [
@@ -28,6 +28,7 @@ function HowToCalculatePercentageFromCgpa() {
   return (
     <main className="mx-auto w-full max-w-4xl px-5 py-8 sm:px-6 lg:py-12">
       <article>
+        {/* Header */}
         <header className="mb-10">
           <a href="/" className="mb-8 inline-flex items-center gap-2">
             <img
@@ -35,6 +36,7 @@ function HowToCalculatePercentageFromCgpa() {
               alt="Stupus"
               className="h-10 w-10 object-contain"
             />
+
             <span className="font-semibold text-[#2563eb]">Stupus</span>
           </a>
 
@@ -53,6 +55,7 @@ function HowToCalculatePercentageFromCgpa() {
             and important things to check before using the result.
           </p>
 
+          {/* Explanation card */}
           <div className="mt-8 rounded-2xl border border-blue-200 bg-blue-50 p-5">
             <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
               <img
@@ -77,6 +80,26 @@ function HowToCalculatePercentageFromCgpa() {
           </div>
         </header>
 
+        {/* Transport to CGPA guide */}
+        <section className="mb-12 rounded-2xl border border-blue-200 bg-blue-50 p-7">
+          <h2 className="text-2xl font-bold text-slate-900">
+            First, learn how to calculate CGPA
+          </h2>
+
+          <p className="mt-2 leading-7 text-slate-600">
+            If you are not sure how your CGPA is calculated from your semester
+            results, read our step-by-step guide first.
+          </p>
+
+          <a
+            href="/blog/how-to-calculate-cgpa"
+            className="mt-5 inline-flex rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white transition hover:bg-blue-700"
+          >
+            How to Calculate CGPA →
+          </a>
+        </section>
+
+        {/* What is CGPA */}
         <Section title="What is CGPA?">
           <p>
             CGPA stands for{" "}
@@ -91,6 +114,7 @@ function HowToCalculatePercentageFromCgpa() {
           </p>
         </Section>
 
+        {/* What is percentage */}
         <Section title="What does percentage mean?">
           <p>
             Percentage expresses a result on a scale of 100. For example, a
@@ -103,6 +127,7 @@ function HowToCalculatePercentageFromCgpa() {
           </p>
         </Section>
 
+        {/* Direct conversion */}
         <Section title="Can you calculate percentage directly from CGPA?">
           <p>
             Yes, but you need to know the conversion formula used by your
@@ -123,13 +148,16 @@ function HowToCalculatePercentageFromCgpa() {
           </Note>
         </Section>
 
+        {/* Formula */}
         <Section title="The basic conversion method">
           <p>
             If your university gives you a formula in the form of a multiplier,
-            the calculation is simply:
+            the calculation is:
           </p>
 
-          <Formula>Percentage = CGPA × Conversion Factor</Formula>
+          <Formula>
+            Percentage = CGPA × Conversion Factor
+          </Formula>
 
           <p>
             For example, if an institution specifically states that percentage
@@ -145,6 +173,7 @@ function HowToCalculatePercentageFromCgpa() {
           </p>
         </Section>
 
+        {/* Step-by-step */}
         <Section title="Step-by-step example">
           <Step n="1" title="Find your CGPA">
             <p>
@@ -176,6 +205,7 @@ function HowToCalculatePercentageFromCgpa() {
           </Step>
         </Section>
 
+        {/* Why 9.5 isn't universal */}
         <Section title="Why you should not blindly use CGPA × 9.5">
           <p>
             You may see the formula <strong>CGPA × 9.5</strong> frequently
@@ -197,6 +227,7 @@ function HowToCalculatePercentageFromCgpa() {
           </p>
         </Section>
 
+        {/* Table */}
         <Section title="CGPA to percentage examples">
           <p>
             The table below shows examples using a hypothetical conversion
@@ -219,6 +250,7 @@ function HowToCalculatePercentageFromCgpa() {
           />
         </Section>
 
+        {/* Correct formula */}
         <Section title="How to find the correct formula for your university">
           <p>
             If you are unsure about the conversion, do not guess. Look for the
@@ -247,6 +279,7 @@ function HowToCalculatePercentageFromCgpa() {
           </div>
         </Section>
 
+        {/* No formula */}
         <Section title="What if my university does not provide a formula?">
           <p>
             Do not automatically choose a formula from a random calculator
@@ -256,6 +289,7 @@ function HowToCalculatePercentageFromCgpa() {
           </p>
         </Section>
 
+        {/* Comparison */}
         <Section title="Is CGPA the same as percentage?">
           <p>
             No. CGPA is a grade-point measure, while percentage is expressed on
@@ -276,6 +310,7 @@ function HowToCalculatePercentageFromCgpa() {
           />
         </Section>
 
+        {/* Mistakes */}
         <Section title="Common mistakes when converting CGPA">
           <div className="space-y-4">
             <Mistake
@@ -300,6 +335,7 @@ function HowToCalculatePercentageFromCgpa() {
           </div>
         </Section>
 
+        {/* Stupus */}
         <Section title="How Stupus can help">
           <p>
             If you already know your CGPA and your university&apos;s conversion
@@ -314,6 +350,7 @@ function HowToCalculatePercentageFromCgpa() {
           </p>
         </Section>
 
+        {/* FAQ */}
         <Section title="Frequently asked questions">
           <Faq
             question="What is the formula to convert CGPA to percentage?"
@@ -336,6 +373,26 @@ function HowToCalculatePercentageFromCgpa() {
           />
         </Section>
 
+        {/* Transport to CGPA guide again */}
+        <section className="mt-12 rounded-2xl border border-blue-200 bg-blue-50 p-7">
+          <h2 className="text-2xl font-bold text-slate-900">
+            Want to learn how your CGPA is calculated?
+          </h2>
+
+          <p className="mt-2 leading-7 text-slate-600">
+            Read our complete guide to calculating CGPA from your semester
+            results, SGPAs, and credits.
+          </p>
+
+          <a
+            href="/blog/how-to-calculate-cgpa"
+            className="mt-5 inline-flex rounded-lg border border-blue-200 bg-white px-5 py-3 font-semibold text-blue-700 transition hover:bg-blue-50"
+          >
+            How to Calculate CGPA →
+          </a>
+        </section>
+
+        {/* Calculator CTA */}
         <section className="mt-12 rounded-2xl border border-blue-200 bg-blue-50 p-7 text-center">
           <h2 className="text-2xl font-bold text-slate-900">
             Convert your CGPA to percentage
@@ -443,6 +500,7 @@ function Mistake({
   return (
     <div className="rounded-xl border border-blue-200 p-4">
       <h3 className="font-semibold text-slate-900">{title}</h3>
+
       <p className="mt-1 text-slate-600">{text}</p>
     </div>
   );
@@ -458,6 +516,7 @@ function Faq({
   return (
     <div className="rounded-xl border border-blue-200 p-5">
       <h3 className="font-semibold text-slate-900">{question}</h3>
+
       <p className="mt-2 text-slate-600">{answer}</p>
     </div>
   );
