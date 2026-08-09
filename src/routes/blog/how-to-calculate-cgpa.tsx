@@ -4,7 +4,7 @@ export const Route = createFileRoute("/blog/how-to-calculate-cgpa")({
   head: () => ({
     meta: [
       {
-        title: "How to Calculate CGPA: Step-by-Step Guide",
+        title: "How to Calculate CGPA",
       },
       {
         name: "description",
