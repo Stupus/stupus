@@ -17,7 +17,7 @@ export const universityContent: Record<string, UniversityContent> = {
   vtu: {
     "cgpa-calculator": {
       h1: "VTU CGPA Calculator",
-      title: "VTU CGPA Calculator — Belagavi 10-point scale | Stupus",
+      title: "VTU CGPA Calculator",
       description:
         "Calculate your VTU CGPA from semester SGPAs and credits, and convert it with VTU's official (CGPA − 0.75) × 10 formula.",
       intro:
