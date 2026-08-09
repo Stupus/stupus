@@ -26,7 +26,7 @@ function HowToCalculateCgpa() {
       <article>
         <header className="mb-10">
           <a href="/" className="mb-8 inline-flex items-center gap-2">
-            <img src="/assets/logo.png" alt="Stupus" className="h-10 w-10 object-contain" />
+            <img src="/assets/logo.webp" alt="Stupus" className="h-10 w-10 object-contain" />
             <span className="font-semibold">Stupus</span>
           </a>
           <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-muted-foreground">Student Guide</p>
