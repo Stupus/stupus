@@ -3,7 +3,7 @@ import type {} from "@tanstack/react-start";
 import { universities } from "../data/universities";
 
 // TODO: replace with your project URL once a project name or custom domain is set.
-const BASE_URL = "";
+const BASE_URL = "https://stupus.bond/";
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
